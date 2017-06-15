@@ -34,7 +34,7 @@ void Dijkstra(Heap *h){
 			//Relaxação das arestas, com distEuclid != 0 para impedir que ele salve a distEuclid para ele mesmo
 			//Atualização da distância do vértice j, colocando u como pai do Vértice j
 			if(distEuclid != 0){
-				h->V[j].d = distEuclid;
+				h->V[j].d = u.d + distEuclid;;
 				h->V[j].xPai = u.x;
 				h->V[j].yPai = u.y;
 			}
